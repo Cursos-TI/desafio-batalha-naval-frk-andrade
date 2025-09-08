@@ -62,6 +62,30 @@ int main() {
             tabuleiro[linhaEscolhida][colunaInicial + j] = 3;
     }}
 
+    int linhaInicialDiagonalP = 5;
+    int colunaInicialDiagonalP = 2;
+    //Navio Diagonal principal
+    if (linhaInicialDiagonalP + 2 < 10 && colunaInicialDiagonalP + 2 < 10) {
+    // Loop para inserir o navio na diagonal
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[linhaInicialDiagonalP + i][colunaInicialDiagonalP + i] = 3;
+    }
+    } else {
+    printf("Posição inválida para o navio na diagonal. Ele ultrapassa o tabuleiro.\n");
+    }
+
+    int linhaInicialDiagonalS = 7;
+    int colunaInicialDiagonalS = 7;
+    //Navio Diagonal secundária
+    if (linhaInicialDiagonalS + 2 < 10 && colunaInicialDiagonalS - 2 >= 0) {
+    // Loop para inserir o navio na diagonal
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[linhaInicialDiagonalS + i][colunaInicialDiagonalS - i] = 3; //Aumenta a quantidade de linhas e diminui as colunas
+    }
+    } else {
+    printf("Posição inválida para o navio na diagonal. Ele ultrapassa o tabuleiro.\n");
+    }
+
     int colunaEscolhida = 6;
     int linhaInicial = 3;
 
